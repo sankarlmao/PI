@@ -27,7 +27,7 @@ def get_repo_path(prompt, default="."):
         else:
             print("Directory does not exist. Please enter a valid path.")
 
-def get_filename(prompt, default="data.txt"):
+def get_filename(prompt, default="main_module.py"):
     user_input = input(f"{prompt} (default {default}): ")
     if not user_input.strip():
         return default
@@ -60,7 +60,7 @@ def main():
 
     num_commits = get_positive_int("How many commits do you want to make", 20)
     repo_path = get_repo_path("Enter the path to your local git repository", ".")
-    filename = get_filename("Enter the filename to modify for commits", "data.txt")
+    filename = get_filename("Enter the filename to modify for commits", "main_module.py")
 
     print(f"\nMaking {num_commits} commits in repo: {repo_path}\nModifying file: {filename}\n")
 
